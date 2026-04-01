@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love 💜</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        margin-top: 60px;
+        font-size: 2.5rem;
+    }
+
+    .start-btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        background: linear-gradient(45deg, purple, pink);
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+        box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+    }
+
+    .card {
+        display: none;
+        position: relative;
+        margin-top: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 4px solid;
+        border-image: linear-gradient(45deg, #ff00cc, #ffffff, #ff0066) 1;
+        box-shadow: 0 0 25px rgba(255, 0, 200, 0.4);
+    }
+
+    .card img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        filter: brightness(0.5);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .btn {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        background: #ff00cc;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .btn:hover {
+        background: #ff3399;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hey You 💜✨</h1>
+<p>Just answer these… slowly 😌💫</p>
+<button class="start-btn" onclick="startQuiz()">Start 💖</button>
+
+<div id="q1" class="card">
+<img src="image1.jpg">
+<div class="overlay">
+<h2>1. When did your heart first whisper my name? 💭💜</h2>
+<button class="btn" onclick="next(1)">Next ➡️</button>
+</div>
+</div>
+
+<div id="q2" class="card">
+<img src="image2.jpg">
+<div class="overlay">
+<h2>2. If I was a dream… would you ever wake up? 🌙✨</h2>
+<button class="btn" onclick="next(2)">Next ➡️</button>
+</div>
+</div>
+
+<div id="q3" class="card">
+<img src="image3.jpg">
+<div class="overlay">
+<h2>3. What part of me feels like "home" to you? 🏡💞</h2>
+<button class="btn" onclick="next(3)">Next ➡️</button>
+</div>
+</div>
+
+<div id="q4" class="card">
+<img src="image4.jpg">
+<div class="overlay">
+<h2>4. If time stopped… would you stay with me forever? ⏳❤️</h2>
+<button class="btn" onclick="next(4)">Next ➡️</button>
+</div>
+</div>
+
+<div id="q5" class="card">
+<img src="image5.jpg">
+<div class="overlay">
+<h2>5. Do you feel butterflies… or is it just me? 🦋💜</h2>
+<button class="btn" onclick="next(5)">Next ➡️</button>
+</div>
+</div>
+
+<div id="q6" class="card">
+<img src="image6.jpg">
+<div class="overlay">
+<h2>6. If love had a color… would it be us? 🎨💖</h2>
+<button class="btn" onclick="next(6)">Next ➡️</button>
+</div>
+</div>
+
+<div id="q7" class="card">
+<img src="image7.jpg">
+<div class="overlay">
+<h2>7. Last one… do you feel how deeply I’m yours? ❤️‍🔥💫</h2>
+<button class="btn" onclick="endQuiz()">Finish 💜</button>
+</div>
+</div>
+
+<div id="end" class="card">
+<img src="image7.jpg">
+<div class="overlay">
+<h2>You are my favorite everything 💜<br>I love you endlessly ♾️❤️</h2>
+</div>
+</div>
+
+</div>
+
+<script>
+function startQuiz() {
+    document.querySelector('.start-btn').style.display = 'none';
+    document.getElementById('q1').style.display = 'block';
+}
+
+function next(n) {
+    document.getElementById('q' + n).style.display = 'none';
+    document.getElementById('q' + (n+1)).style.display = 'block';
+}
+
+function endQuiz() {
+    document.getElementById('q7').style.display = 'none';
+    document.getElementById('end').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
